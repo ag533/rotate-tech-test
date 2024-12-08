@@ -1,10 +1,20 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { useState } from 'react';
+import './App.css';
+import ScrabbleForm from './ScrabbleForm';
 
-class App extends Component {
-  render() {
-    return <div className="App">hello world</div>;
-  }
-}
+const App = () => {
+  const [scores, setScores] = useState([]);
+
+  const addScore = (score) => {
+    setScores([...scores, score]);
+  };
+
+  return (
+    <div className="App">
+      <h1>Scrabble Score Calculator</h1>
+      <ScrabbleForm addScore={addScore} />
+    </div>
+  );
+};
 
 export default App;
