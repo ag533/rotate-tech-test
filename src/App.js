@@ -6,8 +6,8 @@ import ScrabbleScores from './ScrabbleScores';
 const App = () => {
   const [scores, setScores] = useState([]);
 
-  const addScore = (score) => {
-    setScores([...scores, score]);
+  const addScore = (newScore) => {
+    setScores((prevScores) => [newScore, ...prevScores]);
   };
 
   return (
