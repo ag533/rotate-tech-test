@@ -12,6 +12,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:server": "jest server",
     "eject": "react-scripts eject",
     "server": "nodemon server/index.js",
     "dev-server": "node-env-run server --exec nodemon | pino-colada",
